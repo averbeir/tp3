@@ -12,8 +12,16 @@ public class tp3 {
         System.out.println(sum(tab));
 
         System.out.println(isEven(-5));
+
+        System.out.println(isPrime(2));
     }
 
+    /**
+     *
+     * @param d
+     * @param n
+     * @return
+     */
     private static int pgcd(int d,int n){
         if(d < 0 || n < 0){
             throw new IllegalArgumentException();
@@ -28,6 +36,11 @@ public class tp3 {
         return d;
     }
 
+    /**
+     *
+     * @param tab
+     * @return
+     */
     private static int maxTab(int[] tab){
         if(tab == null){
             throw new IllegalArgumentException();
@@ -41,6 +54,11 @@ public class tp3 {
         return max;
     }
 
+    /**
+     *
+     * @param tab
+     * @return
+     */
     private static int sum(int[] tab){
         if(tab == null){
             throw new IllegalArgumentException();
@@ -52,11 +70,30 @@ public class tp3 {
         return sum;
     }
 
+    /**
+     *
+     * @param p
+     * @return
+     */
     private static boolean isEven(int p){
         return p%2 == 0;
     }
 
-    private static boolean isPrime(int p){
+    /**
+     *
+     * @param n
+     * @return
+     */
+    private static boolean isPrime(int n){
+        for(int d=2;d<n; d++) {
+            if(n%d==0) {
+                return false;
+            }
+        }
         return true;
+    }
+
+    private static void combine(int[] a, int[] b){
+
     }
 }
