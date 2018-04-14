@@ -14,6 +14,8 @@ public class tp3 {
         System.out.println(isEven(-5));
 
         System.out.println(isPrime(2));
+
+        combine(tab,tab);
     }
 
     /**
@@ -94,6 +96,10 @@ public class tp3 {
     }
 
     private static void combine(int[] a, int[] b){
+        int sum = sum(b);
 
+        for(int i = 0;i<a.length;i++){
+            a[i] = a[i]*sum;
+        }
     }
 }
